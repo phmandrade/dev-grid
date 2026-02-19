@@ -12,7 +12,6 @@
 
 ```bash
 az login
-# Select your subscription if you have multiple
 az account set --subscription "<SUBSCRIPTION_ID>"
 ```
 
@@ -50,21 +49,6 @@ cd ../ansible
 ansible-playbook -i hosts.ini playbook.yml
 
 curl http://<PUBLIC_IP>
-```
-
-### Individual Steps
-
-#### Infrastructure Only (Terraform)
-```bash
-cd terraform
-terraform apply -var-file=terraform.tfvars
-```
-
-#### Configuration Only (Ansible)
-Ensure `ansible/hosts.ini` exists with VM IP, then:
-```bash
-cd ansible
-ansible-playbook -i hosts.ini playbook.yml
 ```
 
 ### Key Design Decisions
