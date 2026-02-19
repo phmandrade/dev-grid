@@ -1,0 +1,8 @@
+# Azure Configuration
+resource_group_name = "truck-rg"
+location             = "eastus"
+ssh_ip = "YOUR_LOCAL_IP/32"  # Example: "203.0.113.45/32"
+
+# VM Admin Account
+admin_username = "azureuser"
+ssh_key = file("~/.ssh/id_rsa.pub")
